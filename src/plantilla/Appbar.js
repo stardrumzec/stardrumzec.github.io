@@ -15,7 +15,7 @@ class Appbarra extends Component {
   render() {
     return (
       <div>
-        <AppBar color='secondary' position='static' >
+        <AppBar color='secondary' position='fixed' >
           <Toolbar>
             <Typography color='inherit' variant='title'>
                 Omar Estrella Drumz - {this.props.titulo}
