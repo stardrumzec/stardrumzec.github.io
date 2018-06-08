@@ -25,3 +25,5 @@ cliente
 src2
 README.md
 .vscode
+.cache
+dist
