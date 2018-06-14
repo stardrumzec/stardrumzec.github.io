@@ -27,6 +27,8 @@ class Appbarra extends Component {
   }
 }
 
+
+
 Appbarra.propTypes = {
   classes: PropTypes.object.isRequired,
   titulo: PropTypes.string

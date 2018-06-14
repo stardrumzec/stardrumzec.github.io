@@ -24,6 +24,7 @@ yarn-error.log*
 yarn.lock
 cliente
 src2
+src4
 README.md
 .vscode
 .cache

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import BarraArriba from './Appbar';
+// import BarraArriba from './Appbar';
+import Header from './Header';
 import Pie from './Footer';
 import { withRouter } from 'react-router-dom';
 
@@ -9,7 +10,10 @@ class Plantilla extends Component {
   render() {
     return (
       <div>
-        <BarraArriba titulo={this.props.titulo} />
+        <Header brand='EL VERDADERO'
+        color='transparent'
+        titulo={this.props.titulo}
+        />
         <Pie />
       </div>
     );
