@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
 
-import BienvenidoPagina from './contenedores/bienvenido';
-import ConciertosPagina from './contenedores/conciertos';
-import NoEncontradoPagina from './contenedores/404';
+import BienvenidoPagina from "./contenedores/bienvenido";
+import ConciertosPagina from "./contenedores/conciertos";
+import NoEncontradoPagina from "./contenedores/404";
 
 class App extends Component {
   render() {
     return (
       <div>
         <Switch>
-          <Route component={BienvenidoPagina} exact={true} path='/' />
-          <Route component={ConciertosPagina} exact={true} path='/conciertos' />
+          <Route component={BienvenidoPagina} exact={true} path="/" />
+          <Route component={ConciertosPagina} exact={true} path="/conciertos" />
           <Route component={NoEncontradoPagina} />
         </Switch>
       </div>

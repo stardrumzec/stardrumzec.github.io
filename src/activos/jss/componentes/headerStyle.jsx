@@ -1,3 +1,5 @@
+import sidebar from "../../img/lander5.jpg";
+
 import {
   container,
   defaultFont,
@@ -10,7 +12,7 @@ import {
   transition,
   boxShadow,
   drawerWidth
-} from "../material-kit-react.jsx";
+} from "../stardrumzec-estilos";
 
 const headerStyle = {
   appBar: {
@@ -113,6 +115,12 @@ const headerStyle = {
     boxShadow:
       "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(33, 33, 33, 0.46)"
   },
+  negro: {
+    color: "#FFFFFF",
+    backgroundColor: "#000 !important",
+    boxShadow:
+      "0 4px 20px 0px rgba(136, 77, 77, 0.46)"
+  },
   white: {
     border: "0",
     padding: "0.625rem 0",
@@ -140,6 +148,8 @@ const headerStyle = {
     visibility: "visible",
     overflowY: "visible",
     borderTop: "none",
+    background: `url(${sidebar}) no-repeat center center fixed`,
+    backgroundSize: "cover",
     textAlign: "left",
     paddingRight: "0px",
     paddingLeft: "0",

@@ -1,6 +1,6 @@
-import { defaultFont } from '../material-kit-react.jsx';
+import { defaultFont } from "../stardrumzec-estilos";
 
-import tooltip from "assets/jss/material-kit-react/tooltipsStyle.jsx";
+import tooltip from "./tooltipsStyle.jsx";
 
 const headerLinksStyle = theme => ({
   list: {
@@ -105,7 +105,7 @@ const headerLinksStyle = theme => ({
       color: "inherit",
       textDecoration: "none",
       display: "block",
-      padding: "10px 20px",
+      padding: "10px 20px"
     }
   },
   ...tooltip,

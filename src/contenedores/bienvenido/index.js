@@ -3,19 +3,18 @@ import PropTypes from "prop-types";
 
 import { withStyles } from "@material-ui/core/styles";
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-import Header from "../../plantilla/Header.jsx";
-// import HeaderLinks from '../../plantilla/HeaderLinks.jsx';
+import Header from "../../plantilla/Header";
+import HeaderLinks from "../../plantilla/HeaderLinks";
+import Footer from "../../plantilla/Footer";
 
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
+// import Button from "@material-ui/core/Button";
 
 import logo from "../../activos/img/magic-portal.svg";
 import lander from "../../activos/img/lander4.jpg";
-
-// FIXME: hay que arreglar el titulo a lo que rompe el {xs} por que se sale de pantalla en el title
 
 const styles = theme => ({
   root: {
@@ -41,6 +40,7 @@ const styles = theme => ({
     justifyContent: "center"
   },
   title: {
+    fontFamily: `'Merriweather', serif`,
     letterSpacing: ".7rem",
     textIndent: ".7rem",
     fontWeight: theme.typography.fontWeightLight,
@@ -50,6 +50,7 @@ const styles = theme => ({
     whiteSpace: "nowrap"
   },
   headline: {
+    fontFamily: `'Merriweather', serif`,
     paddingLeft: theme.spacing.unit * 4,
     paddingRight: theme.spacing.unit * 4,
     marginTop: theme.spacing.unit,
@@ -90,20 +91,20 @@ class Bienvenido extends Component {
     const { classes, ...rest } = this.props;
     return (
       <div className={classes.root}>
-        <Header
-          brand="🎧 StarDrumzEC"
-          changeColorOnScroll={{
-            height: 10,
-            color: "uncolor"
-          }}
-          color="transparent"
-          fixed
-          {...rest}
-        />
-
         <Helmet>
           <title>Omar Estrella Drumz</title>
         </Helmet>
+        <Header
+          brand="🎧"
+          changeColorOnScroll={{
+            height: 40,
+            color: "negro"
+          }}
+          color="transparent"
+          fixed
+          rightLinks={<HeaderLinks />}
+          {...rest}
+        />
         <div className={classes.hero}>
           <div className={classes.content}>
             <img alt="StardrumzEC" className={classes.logo} src={logo} />
@@ -123,6 +124,7 @@ class Bienvenido extends Component {
                 className={classes.title}
                 color="primary"
                 component="h1"
+                gutterBottom
                 variant="display2"
                 >
                 Estrella
@@ -136,19 +138,10 @@ class Bienvenido extends Component {
                 >
                 BATERISTA
               </Typography>
-
-              <Button
-                className={classes.button}
-                color="primary"
-                component={Link}
-                to="/conciertos"
-                variant="outlined"
-                >
-                Conciertos
-              </Button>
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -159,3 +152,12 @@ Bienvenido.propTypes = {
 };
 
 export default withStyles(styles)(Bienvenido);
+/* <Button
+className={classes.button}
+color="primary"
+component={Link}
+to="/conciertos"
+variant="outlined"
+>
+Conciertos
+</Button> */

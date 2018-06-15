@@ -16,100 +16,6 @@ import Menu from "@material-ui/icons/Menu";
 // core components
 import headerStyle from "../activos/jss/componentes/headerStyle.jsx";
 
-const headerStyle1 = {
-  appBar: {
-    display: "flex",
-    border: "0",
-    borderRadius: "3px",
-    padding: "0.625rem 0",
-    marginBottom: "20px",
-    color: "#fff",
-    width: "100%",
-    backgroundColor: "#000",
-    boxShadow:
-      "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)",
-    transition: "all 150ms ease 0s",
-    alignItems: "center",
-    flexFlow: "row nowrap",
-    justifyContent: "flex-start",
-    position: "relative",
-    zIndex: "unset"
-  },
-  absolute: {
-    position: "absolute"
-  },
-  fixed: {
-    position: "fixed",
-    zIndex: "1100"
-  },
-  container: {
-    minHeight: "50px",
-    flex: "1",
-    alignItems: "center",
-    justifyContent: "space-between",
-    display: "flex",
-    flexWrap: "nowrap"
-  },
-  flex: {
-    flex: 1
-  },
-  title: {
-    lineHeight: "30px",
-    fontSize: "18px",
-    borderRadius: "3px",
-    textTransform: "none",
-    color: "inherit",
-    "&:hover,&:focus": {
-      color: "inherit",
-      background: "transparent"
-    }
-  },
-  appResponsive: {
-    margin: "20px 10px"
-  },
-  transparent: {
-    backgroundColor: "transparent !important",
-    boxShadow: "none",
-    paddingTop: "25px",
-    color: "#FFFFFF"
-  },
-  dark: {
-    color: "#FFFFFF",
-    backgroundColor: "#212121 !important",
-    boxShadow:
-      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(33, 33, 33, 0.46)"
-  },
-  white: {
-    border: "0",
-    padding: "0.625rem 0",
-    marginBottom: "20px",
-    color: "#555",
-    backgroundColor: "#fff !important",
-    boxShadow:
-      "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)"
-  },
-  drawerPaper: {
-    border: "none",
-    bottom: "0",
-    transitionProperty: "top, bottom, width",
-    transitionDuration: ".2s, .2s, .35s",
-    transitionTimingFunction: "linear, linear, ease",
-    position: "fixed",
-    display: "block",
-    top: "0",
-    height: "100vh",
-    maxHeight: "1200px",
-    right: "0",
-    left: "auto",
-    visibility: "visible",
-    overflowY: "visible",
-    borderTop: "none",
-    textAlign: "left",
-    paddingRight: "0px",
-    paddingLeft: "0"
-  }
-};
-
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -232,7 +138,8 @@ Header.propTypes = {
     "transparent",
     "white",
     "rose",
-    "dark"
+    "dark",
+    "negro"
   ]),
   rightLinks: PropTypes.node,
   leftLinks: PropTypes.node,
@@ -256,7 +163,8 @@ Header.propTypes = {
       "transparent",
       "white",
       "rose",
-      "dark"
+      "dark",
+      "negro"
     ]).isRequired
   })
 };
