@@ -1,6 +1,7 @@
 {
   "name": "stardrumzec.github.io",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "homepage": "https://stardrumzec.github.io",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^1.2.1",
@@ -16,7 +17,9 @@
     "buildp": "parcel build ./public/index.html --public-url ./ --out-dir ./distp",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom"
+    "test": "react-scripts test --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "devDependencies": {
     "babel-plugin-add-module-exports": "^0.2.1",
@@ -24,5 +27,8 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "react-scripts": "1.1.4"
+  },
+  "optionalDependencies": {
+    "gh-pages": "^1.2.0"
   }
 }
